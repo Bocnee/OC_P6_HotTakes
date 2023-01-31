@@ -11,7 +11,7 @@ exports.allSauces = (req, res, next) => {
 // trouver une sauce
 exports.oneSauce = (req, res, next) => {
     Sauce.findOne({  _id: req.params.id })
-        .then(sauce => res.status(200).json(thing))
+        .then(sauce => res.status(200).json(sauce))
         .catch(error => res.status(404).json({ error }));
 };
 
@@ -22,7 +22,7 @@ exports.createSauce = (req, res, next) => {
     delete sauceObject._id;
     delete sauceObject._userId;
     const sauce = new Sauce({
-        ...thingObject,
+        ...sauceObject,
         userId: req.auth.userId,
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
         likes: 0,
