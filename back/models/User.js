@@ -1,3 +1,7 @@
+/* Schéma utilisateur
+* email: string, il doit être unique
+* password: string, on doit le hashé
+*/
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
