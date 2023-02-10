@@ -1,4 +1,5 @@
-/* On vient créer le schéma des sauces
+/*
+* On vient créer le schéma des sauces
 * userId: string, l'identifiant MongoDB
 * name: string, nom de la sauce
 * manufacturer: string, fabricant de la sauce
@@ -11,6 +12,7 @@
 * usersDislikes: tableau des utilisateurs
 * usersLikes: tableau des utilisateurs
 */
+
 const mongoose = require('mongoose');
 
 const sauceSchema = mongoose.Schema({
