@@ -1,19 +1,10 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const mongoose = require('mongoose');
 const path = require('path');
-const dotenv = require("dotenv");
-const result = dotenv.config();
-
+const mongoose = require('./db');
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
-
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.fgnmbuj.mongodb.net/?retryWrites=true&w=majority`,
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à la base de donée réussie.'))
-  .catch(() => console.log('Connexion à la base de donnée échouée.'));
 
 app.use(express.json());
 
