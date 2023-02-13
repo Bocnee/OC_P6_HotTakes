@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
     try {
-        // On vient splitter le token dans le header, pour enlever le Baerer
+//      On vient splitter le token dans le header, pour enlever le Baerer
         const token = req.headers.authorization.split(' ')[1];
         const decodedToken = jwt.verify(token, 'TOKEN_RANDOM');
         const userId = decodedToken.userId;

@@ -1,6 +1,6 @@
-// On vient configurer multer pour l'ajout de fichier
+//  On vient configurer multer pour l'ajout de fichier
 const multer = require('multer');
-// bibliothèque des images
+//  bibliothèque des images
 const MIME_TYPES = {
     'image/jpg': 'jpg',
     'image/jpeg': 'jpeg',
